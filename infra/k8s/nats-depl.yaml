@@ -13,14 +13,14 @@ spec:
         app: nats
     spec:
       containers:
-        - name: myapp
+        - name: nats
           image: nats-streaming:0.17.0
           args:
             [
               '-p',
-              '422',
+              '4222',
               '-m',
-              '822',
+              '8222',
               '-hbi',
               '5s',
               '-hbt',
