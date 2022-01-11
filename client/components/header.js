@@ -4,14 +4,15 @@ const Header = ({ currentUser }) => {
 	const links = [
 		!currentUser && { label: 'Sign Up', href: '/auth/signup' },
 		!currentUser && { label: 'Sign In', href: '/auth/signin' },
+		currentUser && { label: 'My Orders', href: '/orders' },
 		currentUser && { label: 'Sign Out', href: '/auth/signout' },
 	]
 		.filter(Boolean)
 		.map(({ label, href }) => {
 			return (
-				<li className="nav-item" key={href}>
+				<li className="nav-item " key={href}>
 					<Link href={href}>
-						<a className="nav-link">{label}</a>
+						<a className="nav-link text-white">{label}</a>
 					</Link>
 				</li>
 			);
