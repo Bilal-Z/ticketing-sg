@@ -5,6 +5,7 @@ on: pull_request
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: CI
     env:
       STRIPE_KEY: ${{secrets.STRIPE_KEY}}
     steps:
